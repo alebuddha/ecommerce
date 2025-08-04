@@ -2,7 +2,7 @@
 
 @layer base{
   html{
-    @apply bg-amber-400 ;
+    @apply bg-slate-500 ;
     @apply text-white;
   }
 

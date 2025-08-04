@@ -1,5 +1,5 @@
 import SearchBar from "./searchbar";
-const elements = ['Home','Cart',"Contact","About"];
+const elements = ['Home',"Contact","About",'Cart'];
 
 function Navbar(){
   return(
@@ -8,9 +8,7 @@ function Navbar(){
     <SearchBar/>
     <ul className="flex gap-4 p-2 items-center">
       {
-        elements.map((el)=>{
-          return <li>{el}</li>
-        }
+        elements.map((el)=> <li>{el}</li>
         )
       }
     </ul>
