@@ -9,12 +9,10 @@ export default function App(){
 
   return(
     <div className="min-h-screen">
-      {/* <Navbar/> */}
-
-      <SearchBar setSearchResults = {setSearchResults} />
-
-      <Home searchResults = {searchResults} />
+      <Navbar setSearchResults={setSearchResults} />
       
+      <Home searchResults = {searchResults} />
+
 
     </div>
   )

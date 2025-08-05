@@ -1,4 +1,5 @@
-// import { Search } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { SearchCheck } from 'lucide-react';
 
 // export default function SearchBar(){
 //   return(
@@ -16,7 +17,7 @@
 import {useState} from "react";
 
 function SearchBar(props){
-  const {setSearchResults} = props;
+  const {searchprop} = props;
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleInputChange (event){
@@ -33,16 +34,21 @@ function SearchBar(props){
     if(!response.ok) console.error("Error occurred! ");
 
     const data = await response.json();
-    setSearchResults(data.products);
+    searchprop(data.products);
 
     
   }
   return(
-    <div className="border border-slate-800 flex items-center" >
-      <button className="border bg-teal-400 p-2 " onClick={handleSearch}> SEARCH</button>
+    <div className="border border-slate-800 flex items-center rounded-2xl" >
+      <button className=" border-r-1 border-black p-2 rounded-l-2xl hover:cursor-pointer  transition hover:bg-red-500" 
+        onClick={handleSearch}> SEARCH
+      </button>
+      {/* <Search className=''/> */}
       <input type="text"  
           value={searchTerm}
           onChange={handleInputChange}
+          placeholder='Browse here'
+          className='p-2 focus:outline-none '
          
       />
     </div>
