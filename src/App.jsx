@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Toaster} from "sonner";
 
 import Home from "./pages/home";
-import Navbar from "./components/navbar";
+import NavBar from "./components/navbar";
 import SearchBar from "./components/searchbar";
 
 function App(){
@@ -12,9 +12,12 @@ function App(){
   return(
     <>
       <div className="min-h-screen">
-      
 
-        <SearchBar 
+        
+
+
+
+        <NavBar 
           setSearchResults={setSearchResults} 
           isLoading={isLoading} 
           setIsLoading = {setIsLoading} 

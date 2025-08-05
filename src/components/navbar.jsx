@@ -1,6 +1,6 @@
 import SearchBar from "./searchbar";
 
-function Navbar(){
+function NavBar({setSearchResults, isLoading, setIsLoading}){
   const elements = ['Home',"Contact","About",'Cart'];
  
   return(
@@ -8,7 +8,11 @@ function Navbar(){
 
     <h1>Logo</h1>
 
-    <SearchBar setSearchResults={setSearchResults}/>
+    <SearchBar 
+      setSearchResults={setSearchResults}
+      isLoading={isLoading}
+      setIsLoading={setIsLoading}
+    />
 
     <ul className="flex items-center gap-4">
         {
@@ -22,4 +26,4 @@ function Navbar(){
     </div>
   );
 }
-export default Navbar;
+export default NavBar;
