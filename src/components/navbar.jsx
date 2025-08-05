@@ -3,12 +3,14 @@ const elements = ['Home',"Contact","About",'Cart'];
 
 function Navbar(){
   return(
-    <div className="w-full border-1 flex justify-between p-2 items-center">
+    <div className="w-full p-2 border-1 flex justify-between  items-center  ">
     <h1>Logo</h1>
     <SearchBar/>
-    <ul className="flex gap-4 p-2 items-center">
+    <ul className="flex gap-9 p-3 items-center " >
       {
-        elements.map((el)=> <li>{el}</li>
+        elements.map((el)=>{ 
+          return <li className="hover:text-red-500 cursor-pointer" >{el}</li>
+        } 
         )
       }
     </ul>

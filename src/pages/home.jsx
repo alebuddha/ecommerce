@@ -1,8 +1,15 @@
-function Home(){
+import ResultCard from "../components/resultCard";
+
+function Home(props){
+  const {searchResults} = props;
+  
   return (
-    <>
-    <h1 className="text-yellow-200">This is the home page</h1>
-    </>
+    <div className="flex flex-col gap-4">
+      {searchResults.map((result) =>{
+        return <ResultCard result = {result} />
+      })}
+    </div>
+
   )
 }
 export default Home
