@@ -13,10 +13,6 @@ function App(){
     <>
       <div className="min-h-screen">
 
-        
-
-
-
         <NavBar 
           setSearchResults={setSearchResults} 
           isLoading={isLoading} 

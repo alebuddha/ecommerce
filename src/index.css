@@ -2,8 +2,8 @@
 
 @layer base{
   html{
-    @apply bg-slate-500 ;
+    @apply bg-gradient-to-br from-neutral-900 via-gray-900 to-black;
     @apply text-white;
   }
-
 }
+
