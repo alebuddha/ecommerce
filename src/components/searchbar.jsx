@@ -53,12 +53,12 @@ function SearchBar({ setSearchResults, isLoading, setIsLoading }) {
 
       {/* <Search className=''/> */}
 
-      <input
+      <input 
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="What are you looking for?"
-        className="p-2 bg-transparent placeholder-gray-400 text-white focus:outline-none text-sm"
+        placeholder="What are you looking for ?"
+        className="p-2 bg-transparent placeholder-gray-400 text-white focus:outline-none text-sm w-full"
       />
     </div>
   );

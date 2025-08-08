@@ -2,7 +2,7 @@ import ResultCard from "../components/resultCard";
 
 function Home({ searchResults, isLoading }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-row gap-4 flex-wrap">
       {isLoading ? (
         <div>Loading search results...</div>
       ) : searchResults?.length > 0 ? (
