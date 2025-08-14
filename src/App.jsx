@@ -7,7 +7,9 @@ import Home from "./pages/home";
 import NavBar from "./components/navbar";
 import SearchBar from "./components/searchbar";
 import Orders from "./pages/orders";
+import About from "./pages/about";
 import Cart from "./pages/cart";
+import Search from "./pages/search";
 import ProductDetails from "./pages/productDetails";
 
 function App() {
@@ -28,15 +30,17 @@ function App() {
           <Routes>
             <Route 
               path="/"
-              element={ <Home searchResults={searchResults} isLoading={isLoading} />}  
+              element={ <Home/>}  
             />
 
             <Route path="/product/:id/user/:userid" element={<ProductDetails />} />
 
             <Route path="/order" element={<Orders/>}  />
+            <Route path="/about" element={<About/>}  />
             <Route path="/cart" element={<Cart/>}  />
-            
 
+            <Route path="/search/:query" element={<Search/>} />
+            
           </Routes>
 
         </Router>

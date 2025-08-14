@@ -14,7 +14,8 @@ function NavBar({ setSearchResults, isLoading, setIsLoading }) {
     >
       <div className="flex justify-between items-center w-full md:w-auto">
         <House className="text-gray-300 hover:text-amber-400 transition hover:cursor-pointer" />
-        <span className="text-xl flex items-center transition hover:text-2xl text-gray-100 w-36 hover:cursor-pointer">
+        <span className="text-xl flex items-center  text-gray-100 w-36 h-5 hover:text-2xl hover:transition
+                         cursor-pointer">
           Shop<span className="text-rose-500">Nest</span>
         </span>
       </div>
@@ -45,8 +46,8 @@ function NavBar({ setSearchResults, isLoading, setIsLoading }) {
 
         <Link to={"/"} className="transition hover:text-amber-400 cursor-pointer">Home</Link>
         <Link to={"/order"} className="transition hover:text-amber-400 cursor-pointer">Order</Link>
+        <Link to={"/about"} className="transition hover:text-amber-400 cursor-pointer">About</Link>
         <Link to={"/cart"}> <ShoppingCart className="text-gray-300 transition hover:text-rose-500" /> </Link>
-        {/* <Link to={"/cart"} className="transition hover:text-amber-400 cursor-pointer">Cart</Link> */}
 
       </div>
 
